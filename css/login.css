@@ -1,0 +1,101 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0D0D0D, #1A1A1A);
+    color: #F5F5F5;
+}
+
+/* Container do login */
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-container {
+    background: #1F1F1F;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Cabeçalho do login */
+.login-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #E50914;
+}
+
+.login-header p {
+    font-size: 14px;
+    color: #AAA;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.login-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #2A2A2A;
+    color: #F5F5F5;
+    font-size: 14px;
+}
+
+.login-form input::placeholder {
+    color: #888;
+}
+
+/* Botão Entrar */
+#loginBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #E50914;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#loginBtn:hover {
+    background: #B20710;
+}
+
+/* Links */
+.login-links {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.login-links a {
+    color: #E50914;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.login-links a:hover {
+    color: #FF3B3B;
+}
+
+/* Mensagem de login */
+.message {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HS Luck</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="page">
+  <!-- Header -->
+<!-- Header -->
+<div class="header">
+    <div class="brand">
+        <div class="brand-icon">🎲</div>
+        <div class="brand-text">
+            <div class="title">HS Luck</div>
+            <div class="subtitle">Divirta-se e ganhe pontos</div>
+        </div>
+    </div>
+
+    <!-- Badges de pontos -->
+    <div class="badges">
+        <span class="pill">Pontos: <span id="pointsValue">100</span></span>
+        <span class="pill">Recorde: <span id="bestValue">100</span></span>
+    </div>
+
+    <!-- Header Right: nome do usuário e logout -->
+    <div class="header-right">
+        <!-- Se não estiver logado, você pode colocar botões de login e cadastrar -->
+        <button class="btn btn-small btn-login" onclick="window.location.href='login.html'">Login</button>
+        <button class="btn btn-small btn-register" onclick="window.location.href='cadastrar.html'">Cadastrar</button>
+        <!-- O JS vai adicionar automaticamente o nome do usuário e botão Sair se estiver logado -->
+    </div>
+</div>
+
+
+
+  <!-- Controle de Jogos -->
+  <div class="toolbar">
+    <div class="controls">
+      <div class="control-group">
+        <label class="pill-label">Escolha o jogo</label>
+        <select id="gameSelect" class="select">
+          <option value="flip">Cara ou Coroa</option>
+          <option value="dice">Dado</option>
+          <option value="wheel">Roda de multiplicadores</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label class="pill-label">Aposta</label>
+        <input type="number" id="betInput" class="input" placeholder="50">
+      </div>
+      <button id="resetBtn" class="btn">Reiniciar Pontos</button>
+      <button id="bonusBtn" class="btn">Resgatar Bônus</button>
+    </div>
+  </div>
+
+  <!-- Jogos -->
+  <div class="grid">
+    <!-- Cara ou Coroa -->
+    <div class="col-left card" id="card-flip">
+      <div class="card-title">Cara ou Coroa</div>
+      <div class="flip-options">
+        <button id="btnCara" class="toggle">Cara</button>
+        <button id="btnCoroa" class="toggle">Coroa</button>
+      </div>
+      <button id="playFlip" class="btn btn-primary">Jogar</button>
+      <div id="flipResult" class="result-text"></div>
+    </div>
+
+    <!-- Dado -->
+    <div class="col-left card" id="card-dice" style="display:none;">
+      <div class="card-title">Dado</div>
+      <div class="flip-options">
+        <button class="toggle" data-choice="1">1</button>
+        <button class="toggle" data-choice="2">2</button>
+        <button class="toggle" data-choice="3">3</button>
+        <button class="toggle" data-choice="4">4</button>
+        <button class="toggle" data-choice="5">5</button>
+        <button class="toggle" data-choice="6">6</button>
+      </div>
+      <button id="playDice" class="btn btn-primary">Jogar</button>
+      <div id="diceResult" class="result-text"></div>
+    </div>
+
+    <!-- Roda de Multiplicadores -->
+    <div class="col-left card" id="card-wheel" style="display:none;">
+      <div class="card-title">Roda de Multiplicadores</div>
+      <div class="wheel-circle">🎯</div>
+      <button id="playWheel" class="btn btn-primary">Girar</button>
+      <div id="wheelResult" class="result-text"></div>
+    </div>
+
+    <!-- Histórico -->
+    <div class="col-right card">
+      <div class="card-title">Histórico</div>
+      <div id="historyList" class="history"></div>
+    </div>
+  </div>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
